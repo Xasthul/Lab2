@@ -34,7 +34,7 @@
         android:layout_width="140dp"
         android:layout_height="47dp"
         android:layout_marginTop="96dp"
-        android:onClick="OnButton1Click"
+        android:onClick="onButton1Click"
         android:text="@string/button_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

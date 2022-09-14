@@ -1,12 +1,12 @@
 package com.example.lab2;
 
 public class CountFunctions {
-    static int CountWords(String text){
+    static int countWords(String text){
         String[] words = text.split("[ .,]+");
         return words.length;
     }
 
-    static int CountChars(String text){
+    static int countChars(String text){
         String[] chars = text.split("\\s");
         return text.length();
     }

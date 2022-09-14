@@ -1,7 +1,7 @@
 package com.example.lab2;
 
-import static com.example.lab2.CountFunctions.CountChars;
-import static com.example.lab2.CountFunctions.CountWords;
+import static com.example.lab2.CountFunctions.countChars;
+import static com.example.lab2.CountFunctions.countWords;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,19 +39,19 @@ public class MainActivity extends AppCompatActivity {
         toast = Toast.makeText(context, text, duration);
     }
 
-    public void OnButton1Click(View view) {
-        EditText tEdit1 = findViewById(R.id.EditText1);
-        TextView tView1 = findViewById(R.id.TextView1);
-        String textFromTextView = tEdit1.getText().toString();
+    public void onButton1Click(View view) {
+        EditText editTextInput = findViewById(R.id.EditText1);
+        TextView textViewResults = findViewById(R.id.TextView1);
+        String textFromTextView = editTextInput.getText().toString();
         if (textFromTextView.equals("")){
             toast.show();
         }
         else {
             if (spinner.getSelectedItem().toString().equals("Count words")) {
-                tView1.setText(getString(R.string.result) + CountWords(textFromTextView) + getString(R.string.words));
+                textViewResults.setText(getString(R.string.result) + countWords(textFromTextView) + getString(R.string.words));
             }
             else {
-                tView1.setText(getString(R.string.result) + CountChars(textFromTextView) + getString(R.string.characters));
+                textViewResults.setText(getString(R.string.result) + countChars(textFromTextView) + getString(R.string.characters));
             }
         }
     }
